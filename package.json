@@ -1,0 +1,96 @@
+{
+  "name": "WhatsKuy",
+  "version": "1.0.1",
+  "description": "WhatsApp API",
+  "homepage": "https://github.com/amiruldev20/WhatsKuy",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "keywords": [
+    "whatsapp",
+    "js-whatsapp",
+    "whatsapp-api",
+    "whatsapp-web",
+    "whatsapp",
+    "whatsapp-chat",
+    "whatsapp-group",
+    "automation",
+    "multi-device"
+  ],
+  "scripts": {
+    "test": "jest",
+    "prepare": "tsc",
+    "build:all": "tsc && typedoc",
+    "build:docs": "typedoc",
+    "build:tsc": "tsc",
+    "example": "node --inspect -r ts-node/register Example/example.ts",
+    "example:legacy": "node --inspect -r ts-node/register Example/example-legacy.ts",
+    "gen-protobuf": "sh WAProto/GenerateStatics.sh",
+    "browser-decode": "yarn ts-node src/BrowserMessageDecoding.ts",
+    "lint": "eslint ./src --ext .js,.ts,.jsx,.tsx",
+    "lint:fix": "eslint ./src --fix --ext .js,.ts,.jsx,.tsx"
+  },
+  "author": "Amirul Dev",
+  "license": "MIT",
+  "repository": {
+    "url": "git@github.com:amiruldev20/WhatsKuy.git"
+  },
+  "dependencies": {
+    "@hapi/boom": "latest",
+    "axios": "^0.27.2",
+    "futoin-hkdf": "^1.5.1",
+    "libsignal": "git+https://github.com/amiruldev20/signal",
+    "music-metadata": "^8.0.1",
+    "node-cache": "latest",
+    "pino": "latest",
+    "protobufjs": "latest",
+    "ws": "latest"
+  },
+  "peerDependencies": {
+    "@adiwajshing/keyed-db": "^0.2.4",
+    "jimp": "^0.16.1",
+    "link-preview-js": "latest",
+    "qrcode-terminal": "latest",
+    "sharp": "^0.30.7"
+  },
+  "peerDependenciesMeta": {
+    "@adiwajshing/keyed-db": {
+      "optional": true
+    },
+    "jimp": {
+      "optional": true
+    },
+    "qrcode-terminal": {
+      "optional": true
+    },
+    "sharp": {
+      "optional": true
+    },
+    "link-preview-js": {
+      "optional": true
+    }
+  },
+  "files": [
+    "lib/*",
+    "WAProto/*",
+    "WASignalGroup/*.js"
+  ],
+  "devDependencies": {
+    "@adiwajshing/eslint-config": "git+https://github.com/adiwajshing/eslint-config",
+    "@adiwajshing/keyed-db": "^0.2.4",
+    "@types/got": "^9.6.12",
+    "@types/jest": "^28.1.8",
+    "@types/node": "^18.7.13",
+    "@types/sharp": "^0.30.5",
+    "@types/ws": "^8.5.3",
+    "eslint": "^8.22.0",
+    "jest": "^29.0.0",
+    "jimp": "^0.16.1",
+    "link-preview-js": "latest",
+    "qrcode-terminal": "latest",
+    "sharp": "^0.30.7",
+    "ts-jest": "^28.0.8",
+    "ts-node": "^10.9.1",
+    "typedoc": "^0.23.11",
+    "typescript": "^4.8.2"
+  }
+}
